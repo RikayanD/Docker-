@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('stage build') {
+            steps {
+                sh 'docker build -t jenkinsfile/testimage:rikayan .'
+            }
+        }
+    }
+}
