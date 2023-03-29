@@ -10,6 +10,7 @@ pipeline {
         stage('Building image') {
             steps {
                 sh 'docker build -t galaxy/redis .'
+                echo $?
             }
         }
     }
