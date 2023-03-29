@@ -2,18 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('cloning git') {
+        stage('Cloning git') {
             steps {
                 git 'https://github.com/RikayanD/Docker-.git'
             }
         }
-        stage('building image') {
+        stage('Building image') {
             steps {
-                script {
-                     dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                script  {
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
                 }
             }
         }
-        
     }
 }
