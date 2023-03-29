@@ -2,9 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('stage build') {
+        stage('build') {
             steps {
-                sh 'docker build -t jenkinsfile/testimage:rikayan .'
+                echo 'building the application...'
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'testing the application...'
+            }
+        }
+        stage('deployment') {
+            steps {
+                echo 'deployment taking place...'
             }
         }
     }
