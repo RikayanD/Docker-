@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Building image') {
             steps {
-                sh 'docker build -t galaxy/redis:$BUILD_NUMBER'
+                sh 'docker build -t galaxy/redis:$BUILD_NUMBER .'
             }
         }
     }
