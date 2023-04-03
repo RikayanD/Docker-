@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Building image') {
             steps {
-                sh 'dockerImage = docker.build gamma'
+                sh 'def customImage = docker.build("my-image:${env.BUILD_ID}")
+                    customImage.push()'
             }
         }
     }
