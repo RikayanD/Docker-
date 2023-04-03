@@ -9,8 +9,7 @@ pipeline {
         }
         stage('Building image') {
             steps {
-                sh 'def customImage = docker.build("my-image:${env.BUILD_ID}")
-                    customImage.push()'
+                sh 'docker build -t galaxy/job1:latest .'
             }
         }
     }
