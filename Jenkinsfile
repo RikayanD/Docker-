@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Building image') {
             steps {
-                sh 'docker build -t galaxy/job1:latest .'
+                script 'dockerImage = docker.build registry + ":$BUILD_NUMBER"'
             }
         }
     }
