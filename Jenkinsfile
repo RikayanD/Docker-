@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Building image') {
             steps {
-                sh 'dockerImage = docker.build registry + ":$BUILD_NUMBER" .'
+                sh 'dockerImage = docker.build gamma'
             }
         }
     }
