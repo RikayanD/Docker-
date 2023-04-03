@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Building image') {
             steps {
-                sh 'docker build -t galaxy/redis:latest .'
+                sh 'docker build -t galaxy/job1:latest .'
             }
         }
     }
