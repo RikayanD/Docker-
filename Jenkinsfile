@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Building image') {
             steps {
-                sh 'docker build -t galaxy/job1:latest .'
+                sh 'def app = docker.build("docker.io/rikayan/Docker:${env.BUILD_NUMBER}", ".")'
             }
         }
     }
