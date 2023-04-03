@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Building image') {
             steps {
-                sh 'def app = docker build -t rikayan/job1 .'
+                sh 'docker build -t rikayan/job1 .'
             }
         }
     }
