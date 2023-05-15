@@ -9,7 +9,9 @@ pipeline {
         }
         stage('Building image') {
             steps {
-                sh 'docker build -t rikayan/job1 .'
+                script {
+                    sh 'docker build -t rikayan/job1 .'
+                }
             }
         }
     }
